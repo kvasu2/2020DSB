@@ -1,0 +1,114 @@
+---
+title: "Music trend (1920-2020)"
+author: "Tyler Billingsley, Danni Huang, Ted Tranel, Karthik Vasu, Alyssa Whittemore"
+date: "Last updated on `r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    df_print: kable
+    code_folding: hide
+
+---
+
+# Models
+
+```{r eval=TRUE, message=FALSE,warning=FALSE}
+music<-read.csv("data.csv")
+mod1<-lm(popularity~acousticness+danceability+duration_ms+energy+instrumentalness+liveness+loudness+speechiness+tempo+valence,data = music)
+summary(mod1)
+anova(mod1)
+```
+
+
+Looking at the summary of this linear model, we can tell that all independent variables are significant for predicting the popularity of music trend. However, the ANOVA gives us that tempo is not important with other variables hold constant. Hence, I remove tempo vairables and get the second linear model.
+
+
+```{r,eval=TRUE, message=FALSE,warning=FALSE}
+mod2<-lm(popularity~acousticness+danceability+duration_ms+energy+instrumentalness+liveness+loudness+speechiness+valence,data = music)
+summary(mod2)
+```
+
+The second linear model seems good since each variable indicates the significance for the prediction of popularity of music trend. 
+
+```{r,eval=TRUE,message=FALSE,warning=FALSE}
+library(MASS)
+library(candisc)
+library(stats)
+library(car)
+step1 <- stepAIC(mod2, direction="both")
+step2 <- stepAIC(mod2, direction="forward")
+step3 <- stepAIC(mod2, direction="backward")
+summary(step3)
+```
+
+Model selection is critical for choosing the "best" appropriate model we want. The smaller AIC, the better model. AIC stands for Akaike Information Criterion that is to estimate the out-of-sample prediction error as a statistical tool. Here, the smallest AIC is 934358. We have three different model selection methods that are stepwise, backward and forward. 
+
+```{r,eval=TRUE,message=FALSE,warning=FALSE}
+newmusic<-data.frame(music$acousticness,music$danceability,music$duration_ms,music$energy,music$instrumentalness,music$liveness,music$loudness,music$speechiness,music$popularity,music$valence)
+colnames(newmusic)<-c('acousticness','danceability','duration_ms','energy','instrumentalness','liveness','loudness','speechiness','popularity','valence')
+head(newmusic)
+```
+
+```{r,eval=TRUE,message=FALSE,warning=FALSE}
+par(mfrow=c(1,1))
+stars(newmusic[1:40,])
+```
+
+The star graph tells us the similar or different star image for each variable. It looks like face recognition. 
+
+```{r,eval=TRUE,message=FALSE,warning=FALSE}
+summary(newmusic)
+apply(newmusic,2,var)
+apply(newmusic,2,sd)
+```
+
+This gives us the summary statistics, variance and standard deviation of each variable. 
+
+
+## Check the assumptions of homogeneity of variance-covariance matrix information 
+```{r,eval=TRUE,message=FALSE,warning=FALSE}
+newmusic[,'explicit']<-music$explicit
+head(newmusic)
+dim(newmusic)
+```
+
+```{r,eval=TRUE,message=FALSE,warning=FALSE}
+cov(newmusic[newmusic$explicit == 1, -11])
+cov(newmusic[newmusic$explicit == 0, -11])
+cor(newmusic[,1:10])
+cov(newmusic[,1:10])
+```
+
+There exist correlation among these variables. 
+
+## Principle component analysis 
+
+```{r,message=FALSE,warning=FALSE}
+library(ISLR)
+library(rgl)
+X<-as.matrix(newmusic[,c('acousticness','danceability','duration_ms','energy','instrumentalness','liveness','loudness','speechiness','popularity','valence')])
+pca <- prcomp(X, retx=TRUE,center = TRUE, scale. = TRUE)
+```
+
+```{r,eval=TRUE,message=FALSE,warning=FALSE}
+plot(pca)
+```
+```{r,eval=TRUE,message=FALSE,warning=FALSE}
+screeplot(pca,type = 'lines')
+```
+
+Principle component anaylsis is very useful in the real world to solve industry problems because we have super complicated and large dataset. It is statistical analysis tool for data reduction by increasing the interpretation and minimizing the information loss simutaneously. 
+A screen plot indicates how much variation each principle component explains for the information. 
+In this case, we can choose eight principle components since the variance is close to 0.5 but also maintain the most information.
+
+```{r,eval=TRUE,message=FALSE,warning=FALSE}
+loadings <- pca$rotation
+scores <- pca$x
+dev.new(height=7, width=7)
+biplot(scores[,1:8],loadings[,1:8],xlim = c(-5,5),ylim=c(-5,5),expand=1)
+```
+PCA reduces the dimensions by the construction of principle components. PCs displays variation and explains varied influences of original variables. Loadings and scores are used to find out what produces the diffrence among clusters. 
+In this case, we can group acousticness and instrumentalness as factor transmittor; group speechiness,valence and danceability as factor rhythm; group popularity,loudness,energy,liveness and duration_ms as factor activeness. 
+

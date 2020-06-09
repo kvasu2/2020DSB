@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Tyler Billingsley, Danni Huang, Ted Tranel, Karthik Vasu, Alyssa Whittemore" />
+
+
+<title>Music trend (1920-2020)</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { background-color: #f8f8f8; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">2020 DSB Final Project</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Blogpost</a>
+</li>
+<li>
+  <a href="models.html">Models</a>
+</li>
+<li>
+  <a href="about_data.html">About Data</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Music trend (1920-2020)</h1>
+<h4 class="author">Tyler Billingsley, Danni Huang, Ted Tranel, Karthik Vasu, Alyssa Whittemore</h4>
+<h4 class="date">Last updated on 2020-06-09</h4>
+
+</div>
+
+
+<div id="models" class="section level1">
+<h1>Models</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">music&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;data.csv&quot;</span>)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">mod1&lt;-<span class="kw">lm</span>(popularity<span class="op">~</span>acousticness<span class="op">+</span>danceability<span class="op">+</span>duration_ms<span class="op">+</span>energy<span class="op">+</span>instrumentalness<span class="op">+</span>liveness<span class="op">+</span>loudness<span class="op">+</span>speechiness<span class="op">+</span>tempo<span class="op">+</span>valence,<span class="dt">data =</span> music)</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw">summary</span>(mod1)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = popularity ~ acousticness + danceability + duration_ms + 
+##     energy + instrumentalness + liveness + loudness + speechiness + 
+##     tempo + valence, data = music)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -62.735 -11.975  -2.266  10.373  79.265 
+## 
+## Coefficients:
+##                    Estimate Std. Error  t value Pr(&gt;|t|)    
+## (Intercept)       4.330e+01  4.023e-01  107.615  &lt; 2e-16 ***
+## acousticness     -2.523e+01  1.735e-01 -145.418  &lt; 2e-16 ***
+## danceability      2.495e+01  3.009e-01   82.923  &lt; 2e-16 ***
+## duration_ms      -1.212e-06  3.287e-07   -3.688 0.000226 ***
+## energy            8.624e+00  3.246e-01   26.565  &lt; 2e-16 ***
+## instrumentalness -6.523e+00  1.435e-01  -45.462  &lt; 2e-16 ***
+## liveness         -8.056e+00  2.312e-01  -34.851  &lt; 2e-16 ***
+## loudness          2.723e-01  1.208e-02   22.539  &lt; 2e-16 ***
+## speechiness      -1.723e+01  3.431e-01  -50.204  &lt; 2e-16 ***
+## tempo             2.449e-02  1.334e-03   18.366  &lt; 2e-16 ***
+## valence          -2.241e+01  1.989e-01 -112.670  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 15.96 on 168581 degrees of freedom
+## Multiple R-squared:  0.4435, Adjusted R-squared:  0.4435 
+## F-statistic: 1.344e+04 on 10 and 168581 DF,  p-value: &lt; 2.2e-16</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">anova</span>(mod1)</a></code></pre></div>
+<div class="kable-table">
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">Df</th>
+<th align="right">Sum Sq</th>
+<th align="right">Mean Sq</th>
+<th align="right">F value</th>
+<th align="right">Pr(&gt;F)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>acousticness</td>
+<td align="right">1</td>
+<td align="right">2.852224e+07</td>
+<td align="right">2.852224e+07</td>
+<td align="right">1.119850e+05</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="even">
+<td>danceability</td>
+<td align="right">1</td>
+<td align="right">4.039266e+05</td>
+<td align="right">4.039266e+05</td>
+<td align="right">1.585910e+03</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="odd">
+<td>duration_ms</td>
+<td align="right">1</td>
+<td align="right">5.824635e+03</td>
+<td align="right">5.824635e+03</td>
+<td align="right">2.286887e+01</td>
+<td align="right">0.0000017</td>
+</tr>
+<tr class="even">
+<td>energy</td>
+<td align="right">1</td>
+<td align="right">2.439193e+04</td>
+<td align="right">2.439193e+04</td>
+<td align="right">9.576836e+01</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="odd">
+<td>instrumentalness</td>
+<td align="right">1</td>
+<td align="right">6.684480e+05</td>
+<td align="right">6.684480e+05</td>
+<td align="right">2.624482e+03</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="even">
+<td>liveness</td>
+<td align="right">1</td>
+<td align="right">5.626335e+05</td>
+<td align="right">5.626335e+05</td>
+<td align="right">2.209030e+03</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="odd">
+<td>loudness</td>
+<td align="right">1</td>
+<td align="right">4.220132e+05</td>
+<td align="right">4.220132e+05</td>
+<td align="right">1.656922e+03</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="even">
+<td>speechiness</td>
+<td align="right">1</td>
+<td align="right">3.794688e+05</td>
+<td align="right">3.794688e+05</td>
+<td align="right">1.489883e+03</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="odd">
+<td>tempo</td>
+<td align="right">1</td>
+<td align="right">3.730151e+00</td>
+<td align="right">3.730151e+00</td>
+<td align="right">1.464540e-02</td>
+<td align="right">0.9036767</td>
+</tr>
+<tr class="even">
+<td>valence</td>
+<td align="right">1</td>
+<td align="right">3.233257e+06</td>
+<td align="right">3.233257e+06</td>
+<td align="right">1.269452e+04</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="odd">
+<td>Residuals</td>
+<td align="right">168581</td>
+<td align="right">4.293709e+07</td>
+<td align="right">2.546971e+02</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Looking at the summary of this linear model, we can tell that all independent variables are significant for predicting the popularity of music trend. However, the ANOVA gives us that tempo is not important with other variables hold constant. Hence, I remove tempo vairables and get the second linear model.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">mod2&lt;-<span class="kw">lm</span>(popularity<span class="op">~</span>acousticness<span class="op">+</span>danceability<span class="op">+</span>duration_ms<span class="op">+</span>energy<span class="op">+</span>instrumentalness<span class="op">+</span>liveness<span class="op">+</span>loudness<span class="op">+</span>speechiness<span class="op">+</span>valence,<span class="dt">data =</span> music)</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw">summary</span>(mod2)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = popularity ~ acousticness + danceability + duration_ms + 
+##     energy + instrumentalness + liveness + loudness + speechiness + 
+##     valence, data = music)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -61.650 -12.003  -2.261  10.382  76.778 
+## 
+## Coefficients:
+##                    Estimate Std. Error  t value Pr(&gt;|t|)    
+## (Intercept)       4.652e+01  3.625e-01  128.342  &lt; 2e-16 ***
+## acousticness     -2.546e+01  1.732e-01 -147.004  &lt; 2e-16 ***
+## danceability      2.404e+01  2.971e-01   80.927  &lt; 2e-16 ***
+## duration_ms      -1.347e-06  3.289e-07   -4.096 4.21e-05 ***
+## energy            8.831e+00  3.248e-01   27.190  &lt; 2e-16 ***
+## instrumentalness -6.601e+00  1.436e-01  -45.984  &lt; 2e-16 ***
+## liveness         -8.216e+00  2.312e-01  -35.531  &lt; 2e-16 ***
+## loudness          2.824e-01  1.208e-02   23.379  &lt; 2e-16 ***
+## speechiness      -1.701e+01  3.433e-01  -49.540  &lt; 2e-16 ***
+## valence          -2.181e+01  1.964e-01 -111.052  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 15.98 on 168582 degrees of freedom
+## Multiple R-squared:  0.4424, Adjusted R-squared:  0.4424 
+## F-statistic: 1.486e+04 on 9 and 168582 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>The second linear model seems good since each variable indicates the significance for the prediction of popularity of music trend.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">library</span>(MASS)</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="kw">library</span>(candisc)</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="kw">library</span>(stats)</a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="kw">library</span>(car)</a>
+<a class="sourceLine" id="cb6-5" data-line-number="5">step1 &lt;-<span class="st"> </span><span class="kw">stepAIC</span>(mod2, <span class="dt">direction=</span><span class="st">&quot;both&quot;</span>)</a></code></pre></div>
+<pre><code>## Start:  AIC=934358.3
+## popularity ~ acousticness + danceability + duration_ms + energy + 
+##     instrumentalness + liveness + loudness + speechiness + valence
+## 
+##                    Df Sum of Sq      RSS    AIC
+## &lt;none&gt;                          43023008 934358
+## - duration_ms       1      4282 43027289 934373
+## - loudness          1    139495 43162503 934902
+## - energy            1    188676 43211683 935094
+## - liveness          1    322192 43345200 935614
+## - instrumentalness  1    539649 43562656 936458
+## - speechiness       1    626328 43649336 936793
+## - danceability      1   1671367 44694375 940782
+## - valence           1   3147347 46170354 946259
+## - acousticness      1   5515037 48538045 954691</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">step2 &lt;-<span class="st"> </span><span class="kw">stepAIC</span>(mod2, <span class="dt">direction=</span><span class="st">&quot;forward&quot;</span>)</a></code></pre></div>
+<pre><code>## Start:  AIC=934358.3
+## popularity ~ acousticness + danceability + duration_ms + energy + 
+##     instrumentalness + liveness + loudness + speechiness + valence</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">step3 &lt;-<span class="st"> </span><span class="kw">stepAIC</span>(mod2, <span class="dt">direction=</span><span class="st">&quot;backward&quot;</span>)</a></code></pre></div>
+<pre><code>## Start:  AIC=934358.3
+## popularity ~ acousticness + danceability + duration_ms + energy + 
+##     instrumentalness + liveness + loudness + speechiness + valence
+## 
+##                    Df Sum of Sq      RSS    AIC
+## &lt;none&gt;                          43023008 934358
+## - duration_ms       1      4282 43027289 934373
+## - loudness          1    139495 43162503 934902
+## - energy            1    188676 43211683 935094
+## - liveness          1    322192 43345200 935614
+## - instrumentalness  1    539649 43562656 936458
+## - speechiness       1    626328 43649336 936793
+## - danceability      1   1671367 44694375 940782
+## - valence           1   3147347 46170354 946259
+## - acousticness      1   5515037 48538045 954691</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">summary</span>(step3)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = popularity ~ acousticness + danceability + duration_ms + 
+##     energy + instrumentalness + liveness + loudness + speechiness + 
+##     valence, data = music)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -61.650 -12.003  -2.261  10.382  76.778 
+## 
+## Coefficients:
+##                    Estimate Std. Error  t value Pr(&gt;|t|)    
+## (Intercept)       4.652e+01  3.625e-01  128.342  &lt; 2e-16 ***
+## acousticness     -2.546e+01  1.732e-01 -147.004  &lt; 2e-16 ***
+## danceability      2.404e+01  2.971e-01   80.927  &lt; 2e-16 ***
+## duration_ms      -1.347e-06  3.289e-07   -4.096 4.21e-05 ***
+## energy            8.831e+00  3.248e-01   27.190  &lt; 2e-16 ***
+## instrumentalness -6.601e+00  1.436e-01  -45.984  &lt; 2e-16 ***
+## liveness         -8.216e+00  2.312e-01  -35.531  &lt; 2e-16 ***
+## loudness          2.824e-01  1.208e-02   23.379  &lt; 2e-16 ***
+## speechiness      -1.701e+01  3.433e-01  -49.540  &lt; 2e-16 ***
+## valence          -2.181e+01  1.964e-01 -111.052  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 15.98 on 168582 degrees of freedom
+## Multiple R-squared:  0.4424, Adjusted R-squared:  0.4424 
+## F-statistic: 1.486e+04 on 9 and 168582 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>Model selection is critical for choosing the “best” appropriate model we want. The smaller AIC, the better model. AIC stands for Akaike Information Criterion that is to estimate the out-of-sample prediction error as a statistical tool. Here, the smallest AIC is 934358. We have three different model selection methods that are stepwise, backward and forward.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">newmusic&lt;-<span class="kw">data.frame</span>(music<span class="op">$</span>acousticness,music<span class="op">$</span>danceability,music<span class="op">$</span>duration_ms,music<span class="op">$</span>energy,music<span class="op">$</span>instrumentalness,music<span class="op">$</span>liveness,music<span class="op">$</span>loudness,music<span class="op">$</span>speechiness,music<span class="op">$</span>popularity,music<span class="op">$</span>valence)</a>
+<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="kw">colnames</span>(newmusic)&lt;-<span class="kw">c</span>(<span class="st">&#39;acousticness&#39;</span>,<span class="st">&#39;danceability&#39;</span>,<span class="st">&#39;duration_ms&#39;</span>,<span class="st">&#39;energy&#39;</span>,<span class="st">&#39;instrumentalness&#39;</span>,<span class="st">&#39;liveness&#39;</span>,<span class="st">&#39;loudness&#39;</span>,<span class="st">&#39;speechiness&#39;</span>,<span class="st">&#39;popularity&#39;</span>,<span class="st">&#39;valence&#39;</span>)</a>
+<a class="sourceLine" id="cb14-3" data-line-number="3"><span class="kw">head</span>(newmusic)</a></code></pre></div>
+<div class="kable-table">
+<table>
+<thead>
+<tr class="header">
+<th align="right">acousticness</th>
+<th align="right">danceability</th>
+<th align="right">duration_ms</th>
+<th align="right">energy</th>
+<th align="right">instrumentalness</th>
+<th align="right">liveness</th>
+<th align="right">loudness</th>
+<th align="right">speechiness</th>
+<th align="right">popularity</th>
+<th align="right">valence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">0.732</td>
+<td align="right">0.819</td>
+<td align="right">180533</td>
+<td align="right">0.341</td>
+<td align="right">0.00e+00</td>
+<td align="right">0.160</td>
+<td align="right">-12.441</td>
+<td align="right">0.4150</td>
+<td align="right">8</td>
+<td align="right">0.9630</td>
+</tr>
+<tr class="even">
+<td align="right">0.982</td>
+<td align="right">0.279</td>
+<td align="right">831667</td>
+<td align="right">0.211</td>
+<td align="right">8.78e-01</td>
+<td align="right">0.665</td>
+<td align="right">-20.096</td>
+<td align="right">0.0366</td>
+<td align="right">5</td>
+<td align="right">0.0594</td>
+</tr>
+<tr class="odd">
+<td align="right">0.996</td>
+<td align="right">0.518</td>
+<td align="right">159507</td>
+<td align="right">0.203</td>
+<td align="right">0.00e+00</td>
+<td align="right">0.115</td>
+<td align="right">-10.589</td>
+<td align="right">0.0615</td>
+<td align="right">6</td>
+<td align="right">0.4060</td>
+</tr>
+<tr class="even">
+<td align="right">0.982</td>
+<td align="right">0.279</td>
+<td align="right">831667</td>
+<td align="right">0.211</td>
+<td align="right">8.78e-01</td>
+<td align="right">0.665</td>
+<td align="right">-20.096</td>
+<td align="right">0.0366</td>
+<td align="right">4</td>
+<td align="right">0.0594</td>
+</tr>
+<tr class="odd">
+<td align="right">0.957</td>
+<td align="right">0.418</td>
+<td align="right">166693</td>
+<td align="right">0.193</td>
+<td align="right">1.70e-06</td>
+<td align="right">0.229</td>
+<td align="right">-10.096</td>
+<td align="right">0.0380</td>
+<td align="right">4</td>
+<td align="right">0.2530</td>
+</tr>
+<tr class="even">
+<td align="right">0.957</td>
+<td align="right">0.259</td>
+<td align="right">186467</td>
+<td align="right">0.212</td>
+<td align="right">2.22e-04</td>
+<td align="right">0.236</td>
+<td align="right">-13.300</td>
+<td align="right">0.0358</td>
+<td align="right">2</td>
+<td align="right">0.2180</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</a>
+<a class="sourceLine" id="cb15-2" data-line-number="2"><span class="kw">stars</span>(newmusic[<span class="dv">1</span><span class="op">:</span><span class="dv">40</span>,])</a></code></pre></div>
+<p><img src="models_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>The star graph tells us the similar or different star image for each variable. It looks like face recognition.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="kw">summary</span>(newmusic)</a></code></pre></div>
+<pre><code>##   acousticness     danceability     duration_ms          energy      
+##  Min.   :0.0000   Min.   :0.0000   Min.   :   5108   Min.   :0.0000  
+##  1st Qu.:0.0978   1st Qu.:0.4120   1st Qu.: 172160   1st Qu.:0.2650  
+##  Median :0.5150   Median :0.5430   Median : 209133   Median :0.4800  
+##  Mean   :0.5014   Mean   :0.5336   Mean   : 232702   Mean   :0.4886  
+##  3rd Qu.:0.8960   3rd Qu.:0.6620   3rd Qu.: 263707   3rd Qu.:0.7090  
+##  Max.   :0.9960   Max.   :0.9880   Max.   :5403500   Max.   :1.0000  
+##  instrumentalness      liveness         loudness        speechiness     
+##  Min.   :0.000000   Min.   :0.0000   Min.   :-60.000   Min.   :0.00000  
+##  1st Qu.:0.000000   1st Qu.:0.0982   1st Qu.:-14.388   1st Qu.:0.03480  
+##  Median :0.000264   Median :0.1340   Median :-10.466   Median :0.04460  
+##  Mean   :0.169476   Mean   :0.2052   Mean   :-11.358   Mean   :0.08362  
+##  3rd Qu.:0.111000   3rd Qu.:0.2590   3rd Qu.: -7.135   3rd Qu.:0.07230  
+##  Max.   :1.000000   Max.   :1.0000   Max.   :  3.855   Max.   :0.96800  
+##    popularity        valence      
+##  Min.   :  0.00   Min.   :0.0000  
+##  1st Qu.: 13.00   1st Qu.:0.3150  
+##  Median : 34.00   Median :0.5390  
+##  Mean   : 31.63   Mean   :0.5285  
+##  3rd Qu.: 48.00   3rd Qu.:0.7490  
+##  Max.   :100.00   Max.   :1.0000</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="kw">apply</span>(newmusic,<span class="dv">2</span>,var)</a></code></pre></div>
+<pre><code>##     acousticness     danceability      duration_ms           energy 
+##     1.428787e-01     3.094748e-02     1.497983e+10     7.147402e-02 
+## instrumentalness         liveness         loudness      speechiness 
+##     9.946638e-02     3.093949e-02     3.215089e+01     1.438006e-02 
+##       popularity          valence 
+##     4.576716e+02     6.993744e-02</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw">apply</span>(newmusic,<span class="dv">2</span>,sd)</a></code></pre></div>
+<pre><code>##     acousticness     danceability      duration_ms           energy 
+##     3.779929e-01     1.759189e-01     1.223921e+05     2.673462e-01 
+## instrumentalness         liveness         loudness      speechiness 
+##     3.153829e-01     1.758962e-01     5.670176e+00     1.199169e-01 
+##       popularity          valence 
+##     2.139326e+01     2.644569e-01</code></pre>
+<p>This gives us the summary statistics, variance and standard deviation of each variable.</p>
+<div id="check-the-assumptions-of-homogeneity-of-variance-covariance-matrix-information" class="section level2">
+<h2>Check the assumptions of homogeneity of variance-covariance matrix information</h2>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">newmusic[,<span class="st">&#39;explicit&#39;</span>]&lt;-music<span class="op">$</span>explicit</a>
+<a class="sourceLine" id="cb22-2" data-line-number="2"><span class="kw">head</span>(newmusic)</a></code></pre></div>
+<div class="kable-table">
+<table>
+<thead>
+<tr class="header">
+<th align="right">acousticness</th>
+<th align="right">danceability</th>
+<th align="right">duration_ms</th>
+<th align="right">energy</th>
+<th align="right">instrumentalness</th>
+<th align="right">liveness</th>
+<th align="right">loudness</th>
+<th align="right">speechiness</th>
+<th align="right">popularity</th>
+<th align="right">valence</th>
+<th align="right">explicit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">0.732</td>
+<td align="right">0.819</td>
+<td align="right">180533</td>
+<td align="right">0.341</td>
+<td align="right">0.00e+00</td>
+<td align="right">0.160</td>
+<td align="right">-12.441</td>
+<td align="right">0.4150</td>
+<td align="right">8</td>
+<td align="right">0.9630</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">0.982</td>
+<td align="right">0.279</td>
+<td align="right">831667</td>
+<td align="right">0.211</td>
+<td align="right">8.78e-01</td>
+<td align="right">0.665</td>
+<td align="right">-20.096</td>
+<td align="right">0.0366</td>
+<td align="right">5</td>
+<td align="right">0.0594</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="right">0.996</td>
+<td align="right">0.518</td>
+<td align="right">159507</td>
+<td align="right">0.203</td>
+<td align="right">0.00e+00</td>
+<td align="right">0.115</td>
+<td align="right">-10.589</td>
+<td align="right">0.0615</td>
+<td align="right">6</td>
+<td align="right">0.4060</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">0.982</td>
+<td align="right">0.279</td>
+<td align="right">831667</td>
+<td align="right">0.211</td>
+<td align="right">8.78e-01</td>
+<td align="right">0.665</td>
+<td align="right">-20.096</td>
+<td align="right">0.0366</td>
+<td align="right">4</td>
+<td align="right">0.0594</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="right">0.957</td>
+<td align="right">0.418</td>
+<td align="right">166693</td>
+<td align="right">0.193</td>
+<td align="right">1.70e-06</td>
+<td align="right">0.229</td>
+<td align="right">-10.096</td>
+<td align="right">0.0380</td>
+<td align="right">4</td>
+<td align="right">0.2530</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">0.957</td>
+<td align="right">0.259</td>
+<td align="right">186467</td>
+<td align="right">0.212</td>
+<td align="right">2.22e-04</td>
+<td align="right">0.236</td>
+<td align="right">-13.300</td>
+<td align="right">0.0358</td>
+<td align="right">2</td>
+<td align="right">0.2180</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1"><span class="kw">dim</span>(newmusic)</a></code></pre></div>
+<pre><code>## [1] 168592     11</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1"><span class="kw">cov</span>(newmusic[newmusic<span class="op">$</span>explicit <span class="op">==</span><span class="st"> </span><span class="dv">1</span>, <span class="dv">-11</span>])</a></code></pre></div>
+<pre><code>##                   acousticness  danceability   duration_ms        energy
+## acousticness      4.389183e-02 -9.851423e-04 -1.158963e+03  -0.014307430
+## danceability     -9.851423e-04  2.774154e-02 -7.984537e+02  -0.008708145
+## duration_ms      -1.158963e+03 -7.984537e+02  5.882155e+09 876.855059452
+## energy           -1.430743e-02 -8.708145e-03  8.768551e+02   0.031270005
+## instrumentalness -6.920642e-04 -4.032365e-03  1.282483e+02   0.001102792
+## liveness          1.658556e-03 -5.042253e-03  5.165318e+02   0.004682174
+## loudness         -1.959696e-01 -1.219010e-02  1.261545e+04   0.329522264
+## speechiness       4.363721e-03  3.120353e-03 -2.759239e+02  -0.002527253
+## popularity        2.554199e-01  3.515795e-01 -1.246782e+05  -0.398216245
+## valence          -7.274560e-04  1.105763e-02 -6.010590e+02   0.007089663
+##                  instrumentalness      liveness      loudness   speechiness
+## acousticness        -6.920642e-04  1.658556e-03 -1.959696e-01  4.363721e-03
+## danceability        -4.032365e-03 -5.042253e-03 -1.219010e-02  3.120353e-03
+## duration_ms          1.282483e+02  5.165318e+02  1.261545e+04 -2.759239e+02
+## energy               1.102792e-03  4.682174e-03  3.295223e-01 -2.527253e-03
+## instrumentalness     1.382256e-02  1.350535e-04 -4.626987e-02 -2.409389e-03
+## liveness             1.350535e-04  3.111692e-02 -2.296257e-02  5.103822e-03
+## loudness            -4.626987e-02 -2.296257e-02  8.961037e+00 -1.000507e-01
+## speechiness         -2.409389e-03  5.103822e-03 -1.000507e-01  2.359715e-02
+## popularity          -2.284524e-01 -4.082567e-01  7.977754e+00 -3.709023e-01
+## valence             -2.433276e-03 -1.951120e-04  7.523000e-02  3.207231e-03
+##                     popularity       valence
+## acousticness      2.554199e-01 -7.274560e-04
+## danceability      3.515795e-01  1.105763e-02
+## duration_ms      -1.246782e+05 -6.010590e+02
+## energy           -3.982162e-01  7.089663e-03
+## instrumentalness -2.284524e-01 -2.433276e-03
+## liveness         -4.082567e-01 -1.951120e-04
+## loudness          7.977754e+00  7.523000e-02
+## speechiness      -3.709023e-01  3.207231e-03
+## popularity        1.843935e+02 -3.218359e-01
+## valence          -3.218359e-01  4.961356e-02</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1"><span class="kw">cov</span>(newmusic[newmusic<span class="op">$</span>explicit <span class="op">==</span><span class="st"> </span><span class="dv">0</span>, <span class="dv">-11</span>])</a></code></pre></div>
+<pre><code>##                   acousticness  danceability   duration_ms        energy
+## acousticness      1.410427e-01 -1.485916e-02 -4.266612e+03 -7.697737e-02
+## danceability     -1.485916e-02  2.959635e-02 -2.882144e+03  1.054665e-02
+## duration_ms      -4.266612e+03 -2.882144e+03  1.567999e+10  7.832944e+02
+## energy           -7.697737e-02  1.054665e-02  7.832944e+02  7.148590e-02
+## instrumentalness  3.965217e-02 -1.494314e-02  3.207378e+03 -2.530378e-02
+## liveness         -1.530368e-03 -3.411812e-03  8.281210e+02  6.415881e-03
+## loudness         -1.210828e+00  2.909260e-01 -2.357527e+04  1.175099e+00
+## speechiness       1.627180e-03  3.215619e-03  8.174933e+01 -4.151451e-04
+## popularity       -4.692545e+00  6.478156e-01  1.541028e+05  2.633134e+00
+## valence          -2.092795e-02  2.778940e-02 -6.950977e+03  2.740537e-02
+##                  instrumentalness      liveness      loudness   speechiness
+## acousticness         3.965217e-02 -1.530368e-03 -1.210828e+00  0.0016271801
+## danceability        -1.494314e-02 -3.411812e-03  2.909260e-01  0.0032156190
+## duration_ms          3.207378e+03  8.281210e+02 -2.357527e+04 81.7493314818
+## energy              -2.530378e-02  6.415881e-03  1.175099e+00 -0.0004151451
+## instrumentalness     1.043333e-01 -2.679135e-03 -7.896379e-01 -0.0026226834
+## liveness            -2.679135e-03  3.091070e-02  6.671577e-02  0.0026731345
+## loudness            -7.896379e-01  6.671577e-02  3.227152e+01 -0.0509718505
+## speechiness         -2.622683e-03  2.673134e-03 -5.097185e-02  0.0125518028
+## popularity          -1.943542e+00 -2.664367e-01  4.870813e+01 -0.3341728354
+## valence             -1.803353e-02  1.177794e-04  5.260670e-01  0.0019323260
+##                     popularity       valence
+## acousticness     -4.692545e+00 -2.092795e-02
+## danceability      6.478156e-01  2.778940e-02
+## duration_ms       1.541028e+05 -6.950977e+03
+## energy            2.633134e+00  2.740537e-02
+## instrumentalness -1.943542e+00 -1.803353e-02
+## liveness         -2.664367e-01  1.177794e-04
+## loudness          4.870813e+01  5.260670e-01
+## speechiness      -3.341728e-01  1.932326e-03
+## popularity        4.377822e+02  1.139460e-01
+## valence           1.139460e-01  7.143513e-02</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1"><span class="kw">cor</span>(newmusic[,<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>])</a></code></pre></div>
+<pre><code>##                  acousticness danceability  duration_ms      energy
+## acousticness       1.00000000   -0.2628325 -0.085879081 -0.76702237
+## danceability      -0.26283247    1.0000000 -0.128299495  0.23880625
+## duration_ms       -0.08587908   -0.1282995  1.000000000  0.02289850
+## energy            -0.76702237    0.2388063  0.022898497  1.00000000
+## instrumentalness   0.33992294   -0.2830957  0.078176917 -0.30314630
+## liveness          -0.02490361   -0.1093318  0.037298094  0.13808993
+## loudness          -0.58545674    0.3179513 -0.031604741  0.77919438
+## speechiness       -0.02641660    0.2109519  0.002156806  0.03613676
+## popularity        -0.60799176    0.2296092  0.049449022  0.48017501
+## valence           -0.18745098    0.5650213 -0.200534919  0.36105162
+##                  instrumentalness     liveness    loudness  speechiness
+## acousticness           0.33992294 -0.024903607 -0.58545674 -0.026416602
+## danceability          -0.28309572 -0.109331773  0.31795133  0.210951946
+## duration_ms            0.07817692  0.037298094 -0.03160474  0.002156806
+## energy                -0.30314630  0.138089925  0.77919438  0.036136758
+## instrumentalness       1.00000000 -0.047391359 -0.43970500 -0.103092055
+## liveness              -0.04739136  1.000000000  0.06516428  0.140732970
+## loudness              -0.43970500  0.065164284  1.00000000 -0.021187136
+## speechiness           -0.10309206  0.140732970 -0.02118714  1.000000000
+## popularity            -0.30649973 -0.067320070  0.44073222 -0.053837815
+## valence               -0.19901896  0.001406362  0.32272871  0.055727440
+##                    popularity      valence
+## acousticness     -0.607991758 -0.187450977
+## danceability      0.229609236  0.565021274
+## duration_ms       0.049449022 -0.200534919
+## energy            0.480175005  0.361051615
+## instrumentalness -0.306499733 -0.199018956
+## liveness         -0.067320070  0.001406362
+## loudness          0.440732218  0.322728707
+## speechiness      -0.053837815  0.055727440
+## popularity        1.000000000  0.005967999
+## valence           0.005967999  1.000000000</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1"><span class="kw">cov</span>(newmusic[,<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>])</a></code></pre></div>
+<pre><code>##                   acousticness  danceability   duration_ms        energy
+## acousticness      1.428787e-01 -1.747734e-02 -3.973055e+03  -0.077511438
+## danceability     -1.747734e-02  3.094748e-02 -2.762428e+03   0.011231362
+## duration_ms      -3.973055e+03 -2.762428e+03  1.497983e+10 749.263450033
+## energy           -7.751144e-02  1.123136e-02  7.492635e+02   0.071474017
+## instrumentalness  4.052307e-02 -1.570667e-02  3.017659e+03  -0.025560216
+## liveness         -1.655779e-03 -3.383106e-03  8.029651e+02   0.006493707
+## loudness         -1.254801e+00  3.171537e-01 -2.193321e+04   1.181180931
+## speechiness      -1.197405e-03  4.450169e-03  3.165519e+01   0.001158520
+## popularity       -4.916526e+00  8.641297e-01  1.294757e+05   2.746316609
+## valence          -1.873813e-02  2.628647e-02 -6.490802e+03   0.025526911
+##                  instrumentalness      liveness      loudness  speechiness
+## acousticness         4.052307e-02 -1.655779e-03 -1.254801e+00 -0.001197405
+## danceability        -1.570667e-02 -3.383106e-03  3.171537e-01  0.004450169
+## duration_ms          3.017659e+03  8.029651e+02 -2.193321e+04 31.655185358
+## energy              -2.556022e-02  6.493707e-03  1.181181e+00  0.001158520
+## instrumentalness     9.946638e-02 -2.629020e-03 -7.863142e-01 -0.003898914
+## liveness            -2.629020e-03  3.093949e-02  6.499242e-02  0.002968470
+## loudness            -7.863142e-01  6.499242e-02  3.215089e+01 -0.014406188
+## speechiness         -3.898914e-03  2.968470e-03 -1.440619e-02  0.014380057
+## popularity          -2.067975e+00 -2.533250e-01  5.346238e+01 -0.138116221
+## valence             -1.659921e-02  6.541970e-05  4.839372e-01  0.001767276
+##                     popularity       valence
+## acousticness     -4.916526e+00 -1.873813e-02
+## danceability      8.641297e-01  2.628647e-02
+## duration_ms       1.294757e+05 -6.490802e+03
+## energy            2.746317e+00  2.552691e-02
+## instrumentalness -2.067975e+00 -1.659921e-02
+## liveness         -2.533250e-01  6.541970e-05
+## loudness          5.346238e+01  4.839372e-01
+## speechiness      -1.381162e-01  1.767276e-03
+## popularity        4.576716e+02  3.376452e-02
+## valence           3.376452e-02  6.993744e-02</code></pre>
+<p>There exist correlation among these variables.</p>
+</div>
+<div id="principle-component-analysis" class="section level2">
+<h2>Principle component analysis</h2>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="kw">library</span>(ISLR)</a>
+<a class="sourceLine" id="cb33-2" data-line-number="2"><span class="kw">library</span>(rgl)</a>
+<a class="sourceLine" id="cb33-3" data-line-number="3">X&lt;-<span class="kw">as.matrix</span>(newmusic[,<span class="kw">c</span>(<span class="st">&#39;acousticness&#39;</span>,<span class="st">&#39;danceability&#39;</span>,<span class="st">&#39;duration_ms&#39;</span>,<span class="st">&#39;energy&#39;</span>,<span class="st">&#39;instrumentalness&#39;</span>,<span class="st">&#39;liveness&#39;</span>,<span class="st">&#39;loudness&#39;</span>,<span class="st">&#39;speechiness&#39;</span>,<span class="st">&#39;popularity&#39;</span>,<span class="st">&#39;valence&#39;</span>)])</a>
+<a class="sourceLine" id="cb33-4" data-line-number="4">pca &lt;-<span class="st"> </span><span class="kw">prcomp</span>(X, <span class="dt">retx=</span><span class="ot">TRUE</span>,<span class="dt">center =</span> <span class="ot">TRUE</span>, <span class="dt">scale. =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1"><span class="kw">plot</span>(pca)</a></code></pre></div>
+<p><img src="models_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1"><span class="kw">screeplot</span>(pca,<span class="dt">type =</span> <span class="st">&#39;lines&#39;</span>)</a></code></pre></div>
+<p><img src="models_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>Principle component anaylsis is very useful in the real world to solve industry problems because we have super complicated and large dataset. It is statistical analysis tool for data reduction by increasing the interpretation and minimizing the information loss simutaneously. A screen plot indicates how much variation each principle component explains for the information. In this case, we can choose eight principle components since the variance is close to 0.5 but also maintain the most information.</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" data-line-number="1">loadings &lt;-<span class="st"> </span>pca<span class="op">$</span>rotation</a>
+<a class="sourceLine" id="cb36-2" data-line-number="2">scores &lt;-<span class="st"> </span>pca<span class="op">$</span>x</a>
+<a class="sourceLine" id="cb36-3" data-line-number="3"><span class="kw">dev.new</span>(<span class="dt">height=</span><span class="dv">7</span>, <span class="dt">width=</span><span class="dv">7</span>)</a>
+<a class="sourceLine" id="cb36-4" data-line-number="4"><span class="kw">biplot</span>(scores[,<span class="dv">1</span><span class="op">:</span><span class="dv">8</span>],loadings[,<span class="dv">1</span><span class="op">:</span><span class="dv">8</span>],<span class="dt">xlim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">5</span>,<span class="dv">5</span>),<span class="dt">ylim=</span><span class="kw">c</span>(<span class="op">-</span><span class="dv">5</span>,<span class="dv">5</span>),<span class="dt">expand=</span><span class="dv">1</span>)</a></code></pre></div>
+<p>PCA reduces the dimensions by the construction of principle components. PCs displays variation and explains varied influences of original variables. Loadings and scores are used to find out what produces the diffrence among clusters. In this case, we can group acousticness and instrumentalness as factor transmittor; group speechiness,valence and danceability as factor rhythm; group popularity,loudness,energy,liveness and duration_ms as factor activeness.</p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
